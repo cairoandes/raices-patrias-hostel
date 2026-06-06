@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #f8f5ef;
-  --gold: #d7b56d;
-  --muted: #aaa39a;
-  --glass: rgba(255, 255, 255, 0.08);
-  --font-inter: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --background: #0A0807;
+  --foreground: #F5F0E8;
+  --terracotta: #C1694F;
+  --sage: #8B9D77;
+  --ochre: #D4A574;
+  --muted: #A89B8C;
+  --glass: rgba(193, 105, 79, 0.08);
+  --font-inter: "DM Sans", Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
 }
 
@@ -22,14 +24,14 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 10% 0%, rgba(215, 181, 109, 0.14), transparent 28rem),
-    linear-gradient(180deg, #050505 0%, #0a0908 46%, #030303 100%);
+    radial-gradient(circle at 10% 0%, rgba(193, 105, 79, 0.14), transparent 28rem),
+    linear-gradient(180deg, #0A0807 0%, #0F0D0B 46%, #080605 100%);
   color: var(--foreground);
   font-family: var(--font-inter), Arial, sans-serif;
 }
 
 ::selection {
-  background: rgba(215, 181, 109, 0.35);
+  background: rgba(193, 105, 79, 0.35);
   color: white;
 }
 
@@ -37,20 +39,200 @@ body {
   font-family: var(--font-display), Georgia, serif;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   STONE & ROCK TEXTURES - Picapiedras Style
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Main stone texture - irregular rocks pattern */
+.stone-texture {
+  position: relative;
+}
+
+.stone-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c5-2 12-1 18 2s10 8 12 15-1 14-5 19-10 8-17 8-13-3-17-8-6-12-5-19 6-12 12-15 13-4 18-2z' fill='%23C1694F' opacity='0.5'/%3E%3Cpath d='M60 50c8-3 18-2 25 4s11 14 10 22-6 16-14 20-17 3-24-1-13-10-14-18 3-17 10-22 12-5 25-4z' fill='%23C1694F' opacity='0.4'/%3E%3Cpath d='M30 80c6-2 14-1 19 3s8 9 8 16-3 13-9 16-12 2-17-1-8-8-8-14 1-12 7-16 8-3 17-3z' fill='%23C1694F' opacity='0.3'/%3E%3Cpath d='M85 15c4-1 9-1 13 2s7 6 7 11-2 9-6 12-8 3-12 1-8-5-8-9 1-10 6-13 5-2 12-2z' fill='%23C1694F' opacity='0.35'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+/* Smaller pebble texture */
+.pebble-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='15' cy='15' rx='12' ry='10' fill='%23C1694F' opacity='0.4' transform='rotate(15 15 15)'/%3E%3Cellipse cx='45' cy='45' rx='10' ry='8' fill='%23C1694F' opacity='0.3' transform='rotate(-10 45 45)'/%3E%3Cellipse cx='45' cy='12' rx='7' ry='6' fill='%23C1694F' opacity='0.35' transform='rotate(25 45 12)'/%3E%3Cellipse cx='12' cy='48' rx='9' ry='7' fill='%23C1694F' opacity='0.25' transform='rotate(-20 12 48)'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Layered rock slabs texture */
+.slab-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20 L80 15 L95 40 L70 80 L30 75 L15 50 Z' fill='%23C1694F' stroke='%23C1694F' stroke-width='0.5' opacity='0.4'/%3E%3Cpath d='M100 30 L170 25 L180 60 L160 100 L110 95 L90 65 Z' fill='%23C1694F' stroke='%23C1694F' stroke-width='0.5' opacity='0.35'/%3E%3Cpath d='M40 110 L90 105 L105 135 L85 170 L45 165 L25 140 Z' fill='%23C1694F' stroke='%23C1694F' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M120 120 L180 115 L190 150 L170 180 L125 175 L110 155 Z' fill='%23C1694F' stroke='%23C1694F' stroke-width='0.5' opacity='0.25'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* Cracked stone texture */
+.cracked-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 L20 45 L35 55 L50 48 L65 52 L80 46 L100 50' stroke='%23C1694F' fill='none' stroke-width='1.5' opacity='0.5'/%3E%3Cpath d='M50 0 L48 20 L55 35 L50 50 L52 65 L48 80 L50 100' stroke='%23C1694F' fill='none' stroke-width='1' opacity='0.4'/%3E%3Cpath d='M10 20 L25 25 L30 15' stroke='%23C1694F' fill='none' stroke-width='0.8' opacity='0.3'/%3E%3Cpath d='M70 70 L85 75 L90 65' stroke='%23C1694F' fill='none' stroke-width='0.8' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+}
+
+/* Mountain rock texture - larger irregular shapes */
+.mountain-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='300' height='300' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50 Q80 20 120 40 T180 60 Q200 80 190 120 T160 160 Q130 180 100 160 T60 130 Q40 100 50 50Z' fill='%23C1694F' opacity='0.4'/%3E%3Cpath d='M180 180 Q220 150 260 170 T290 200 Q280 240 250 250 T200 240 Q170 220 170 190 T180 180Z' fill='%23C1694F' opacity='0.35'/%3E%3Cpath d='M20 200 Q50 180 80 190 T110 220 Q100 250 70 250 T30 240 Q10 220 20 200Z' fill='%23C1694F' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLASS & COMPONENTS
+   ═══════════════════════════════════════════════════════════════ */
+
 .glass {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+  position: relative;
+  border: 1px solid rgba(193, 105, 79, 0.15);
+  background: linear-gradient(135deg, rgba(193, 105, 79, 0.08), rgba(139, 157, 119, 0.04));
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(22px);
 }
 
-.gold-text {
-  color: var(--gold);
+.glass.stone {
+  background: linear-gradient(135deg, 
+    rgba(193, 105, 79, 0.1), 
+    rgba(139, 157, 119, 0.06),
+    rgba(193, 105, 79, 0.08)
+  );
 }
 
-.premium-border {
-  border: 1px solid rgba(215, 181, 109, 0.22);
+.glass.stone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.06;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c5-2 12-1 18 2s10 8 12 15-1 14-5 19-10 8-17 8-13-3-17-8-6-12-5-19 6-12 12-15 13-4 18-2z' fill='%23C1694F' opacity='0.5'/%3E%3Cpath d='M50 50c8-3 18-2 25 4s11 14 10 22-6 16-14 20-17 3-24-1-13-10-14-18 3-17 10-22 12-5 25-4z' fill='%23C1694F' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
 }
+
+.terracotta-text {
+  color: var(--terracotta);
+}
+
+.bohemian-border {
+  border: 1px solid rgba(193, 105, 79, 0.22);
+}
+
+/* Stone card - special card with rock texture */
+.stone-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(193, 105, 79, 0.2);
+  background: linear-gradient(145deg, #0F0D0B, #0A0807, #0D0B09);
+}
+
+.stone-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c5-2 12-1 18 2s10 8 12 15-1 14-5 19-10 8-17 8-13-3-17-8-6-12-5-19 6-12 12-15 13-4 18-2z' fill='%23C1694F' opacity='0.6'/%3E%3Cpath d='M60 50c8-3 18-2 25 4s11 14 10 22-6 16-14 20-17 3-24-1-13-10-14-18 3-17 10-22 12-5 25-4z' fill='%23C1694F' opacity='0.5'/%3E%3Cpath d='M30 80c6-2 14-1 19 3s8 9 8 16-3 13-9 16-12 2-17-1-8-8-8-14 1-12 7-16 8-3 17-3z' fill='%23C1694F' opacity='0.4'/%3E%3Cpath d='M85 15c4-1 9-1 13 2s7 6 7 11-2 9-6 12-8 3-12 1-8-5-8-9 1-10 6-13 5-2 12-2z' fill='%23C1694F' opacity='0.45'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+.stone-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(193, 105, 79, 0.05) 100%);
+  pointer-events: none;
+}
+
+/* Stone header - for section headers */
+.stone-header {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.stone-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q10 10 25 15 T50 20 Q60 25 75 20 T100 20' stroke='%23C1694F' fill='none' stroke-width='2' opacity='0.5'/%3E%3Cpath d='M0 30 Q15 20 30 25 T60 30 Q70 35 85 30 T100 30' stroke='%23C1694F' fill='none' stroke-width='1.5' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 100px 40px;
+}
+
+/* Stone divider */
+.stone-divider {
+  position: relative;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(193, 105, 79, 0.3), transparent);
+}
+
+.stone-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #C1694F;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Stone button */
+.stone-btn {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #C1694F, #A85A42);
+  border: 1px solid rgba(193, 105, 79, 0.3);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.stone-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c5-2 12-1 18 2s10 8 12 15-1 14-5 19-10 8-17 8-13-3-17-8-6-12-5-19 6-12 12-15 13-4 18-2z' fill='%23000' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+.stone-btn:hover {
+  background: linear-gradient(145deg, #D4A574, #C1694F);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   NOISE & UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
 
 .noise {
   position: fixed;

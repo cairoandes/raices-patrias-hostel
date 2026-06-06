@@ -3,7 +3,7 @@ import { DestinationMapLoader } from "@/components/destination-map-loader";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = {
-  title: "Destination Guide | Andean Luxury Resort"
+  title: "Guía Local | Raíces Patrias Hostel"
 };
 
 export default function DestinationPage() {
@@ -11,9 +11,9 @@ export default function DestinationPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Destination Guide"
-          title="Interactive intelligence for Salta's finest restaurants, vineyards, culture, and essential services."
-          copy="This section turns the hotel website into a living guest platform, helping travelers make better decisions before they arrive."
+          eyebrow="Guía Local"
+          title="Descubre Carlos Paz como un local, no como un turista."
+          copy="Lagos, montañas, bares, restaurantes y los mejores spots para que tu estadía sea inolvidable."
         />
       </AnimatedSection>
       <AnimatedSection className="mx-auto max-w-7xl py-14">

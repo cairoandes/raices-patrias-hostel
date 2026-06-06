@@ -8,7 +8,7 @@ import { Reservation, reservationSheetService } from "@/lib/reservations";
 export function GuestDashboard() {
   const [reservations, setReservations] = useState<Reservation[]>([]);
   const [active, setActive] = useState<Reservation | null>(null);
-  const [request, setRequest] = useState("Prepare a private wine tasting recommendation.");
+  const [request, setRequest] = useState("Quiero una recomendación de excursión para mañana.");
 
   useEffect(() => {
     reservationSheetService.listReservations().then((items) => {
@@ -30,24 +30,24 @@ export function GuestDashboard() {
 
   const summaryCards: Array<[LucideIcon, string, string]> = active
     ? [
-        [CalendarDays, "Dates", `${active.checkIn} to ${active.checkOut}`],
-        [ConciergeBell, "Room", active.room],
+        [CalendarDays, "Fechas", `${active.checkIn} al ${active.checkOut}`],
+        [ConciergeBell, "Habitación", active.room],
         [MessageCircle, "Extras", active.extras.join(", ")],
-        [PenLine, "Guests", `${active.guests} guests`]
+        [PenLine, "Huéspedes", `${active.guests} viajeros`]
       ]
     : [];
 
   return (
     <div className="grid gap-6 lg:grid-cols-[340px_1fr]">
       <aside className="glass p-5">
-        <p className="text-xs uppercase tracking-[0.28em] text-[#d7b56d]">Reservations</p>
+        <p className="text-xs uppercase tracking-[0.28em] text-[#C1694F]">Reservas</p>
         <div className="mt-5 grid gap-3">
           {reservations.map((reservation) => (
             <button
               key={reservation.reservationId}
               onClick={() => setActive(reservation)}
               className={`border p-4 text-left ${
-                active?.reservationId === reservation.reservationId ? "border-[#d7b56d] bg-[#d7b56d]/12" : "border-white/10 bg-white/5"
+                active?.reservationId === reservation.reservationId ? "border-[#C1694F] bg-[#C1694F]/12" : "border-white/10 bg-white/5"
               }`}
             >
               <p className="font-semibold text-white">{reservation.guestName}</p>
@@ -61,11 +61,11 @@ export function GuestDashboard() {
         <div className="glass p-6 md:p-8">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-start">
             <div>
-              <p className="text-xs uppercase tracking-[0.28em] text-[#d7b56d]">Guest Dashboard</p>
-              <h2 className="mt-4 font-display text-5xl text-white">{active?.guestName || "Guest"}</h2>
+              <p className="text-xs uppercase tracking-[0.28em] text-[#C1694F]">Dashboard</p>
+              <h2 className="mt-4 font-display text-5xl text-white">{active?.guestName || "Huésped"}</h2>
               <p className="mt-3 text-white/58">{active?.email} / {active?.phone}</p>
             </div>
-            <span className="w-fit border border-[#d7b56d]/35 bg-[#d7b56d]/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#d7b56d]">
+            <span className="w-fit border border-[#C1694F]/35 bg-[#C1694F]/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-[#C1694F]">
               {active?.status}
             </span>
           </div>
@@ -74,7 +74,7 @@ export function GuestDashboard() {
             <div className="mt-8 grid gap-4 md:grid-cols-4">
               {summaryCards.map(([Icon, label, value]) => (
                 <div key={String(label)} className="border border-white/10 bg-white/5 p-4">
-                  <Icon className="text-[#d7b56d]" size={19} />
+                  <Icon className="text-[#C1694F]" size={19} />
                   <p className="mt-4 text-xs uppercase tracking-[0.2em] text-white/42">{label}</p>
                   <p className="mt-2 text-sm leading-6 text-white/72">{value}</p>
                 </div>
@@ -83,19 +83,19 @@ export function GuestDashboard() {
           ) : null}
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button onClick={modify}><PenLine size={17} /> Add Late Checkout</Button>
-            <Button href="/concierge" variant="ghost"><MessageCircle size={17} /> Contact Concierge</Button>
+            <Button onClick={modify}><PenLine size={17} /> Agregar Late Checkout</Button>
+            <Button href="/concierge" variant="ghost"><MessageCircle size={17} /> Contactar Concierge</Button>
           </div>
         </div>
 
         <div className="glass p-6 md:p-8">
-          <p className="text-xs uppercase tracking-[0.28em] text-[#d7b56d]">Request Services</p>
+          <p className="text-xs uppercase tracking-[0.28em] text-[#C1694F]">Solicitar Servicios</p>
           <textarea
             value={request}
             onChange={(event) => setRequest(event.target.value)}
-            className="mt-5 min-h-36 w-full border border-white/10 bg-white/5 p-4 text-white outline-none focus:border-[#d7b56d]/50"
+            className="mt-5 min-h-36 w-full border border-white/10 bg-white/5 p-4 text-white outline-none focus:border-[#C1694F]/50"
           />
-          <Button className="mt-4">Send Service Request</Button>
+          <Button className="mt-4">Enviar Solicitud</Button>
         </div>
       </section>
     </div>

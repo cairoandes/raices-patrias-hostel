@@ -5,14 +5,14 @@ import { SectionHeading } from "@/components/section-heading";
 import { images } from "@/lib/assets";
 
 const events = [
-  ["Weddings", images.wedding, "Ceremonies framed by the Andes, with private dining, floral direction, and full guest logistics."],
-  ["Conferences", images.conference, "Board-level meeting environments with discreet technology and flawless hospitality operations."],
-  ["Corporate Events", images.lobby, "Executive retreats, incentive travel, launches, and high-touch brand gatherings."],
-  ["Luxury Celebrations", images.pool, "Milestone weekends, private buyouts, chef-led receptions, and bespoke entertainment."]
+  ["Fogatas Nocturnas", images.terrace, "Noches mágicas bajo las estrellas con guitarreadas, mates y nuevas amistades."],
+  ["Clases de Cocina", images.gastronomy, "Aprende a hacer empanadas, locro y otros platos típicos cordobeses."],
+  ["Yoga & Meditación", images.spa, "Clases al amanecer en la terraza con vista a las sierras de Córdoba."],
+  ["Excursiones Grupales", images.mountain, "Lagos, montañas, pueblos serranos y los mejores spots de la zona."]
 ];
 
 export const metadata = {
-  title: "Events & Corporate | Andean Luxury Resort"
+  title: "Eventos | Raíces Patrias Hostel"
 };
 
 export default function EventsPage() {
@@ -20,9 +20,9 @@ export default function EventsPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Events & Corporate"
-          title="Commercial pages that sell premium occasions, not banquet packages."
-          copy="A high-value event lead experience for weddings, conferences, corporate events, and luxury celebrations."
+          eyebrow="Eventos & Actividades"
+          title="Experiencias que crean comunidad entre viajeros."
+          copy="Cada semana organizamos actividades para que conozcas gente, disfrutes Córdoba y crees recuerdos inolvidables."
         />
       </AnimatedSection>
 
@@ -40,14 +40,14 @@ export default function EventsPage() {
       </div>
 
       <AnimatedSection className="mx-auto mb-24 max-w-7xl glass p-6 md:p-8">
-        <p className="text-xs uppercase tracking-[0.28em] text-[#d7b56d]">Inquiry Form</p>
+        <p className="text-xs uppercase tracking-[0.28em] text-[#C1694F]">Consulta Privada</p>
         <div className="mt-6 grid gap-4 md:grid-cols-4">
-          {["Name", "Email", "Event Type", "Preferred Date"].map((field) => (
-            <input key={field} placeholder={field} className="h-13 border border-white/10 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#d7b56d]/50" />
+          {["Nombre", "Email", "Tipo de Evento", "Fecha Preferida"].map((field) => (
+            <input key={field} placeholder={field} className="h-13 border border-white/10 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-white/35 focus:border-[#C1694F]/50" />
           ))}
         </div>
-        <textarea placeholder="Tell us about your event." className="mt-4 min-h-32 w-full border border-white/10 bg-white/5 p-4 text-white outline-none placeholder:text-white/35 focus:border-[#d7b56d]/50" />
-        <Button className="mt-4">Submit Event Inquiry</Button>
+        <textarea placeholder="Contanos sobre tu evento o actividad privada." className="mt-4 min-h-32 w-full border border-white/10 bg-white/5 p-4 text-white outline-none placeholder:text-white/35 focus:border-[#C1694F]/50" />
+        <Button className="mt-4">Enviar Consulta</Button>
       </AnimatedSection>
     </main>
   );

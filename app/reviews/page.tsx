@@ -3,7 +3,7 @@ import { ReviewsFilter } from "@/components/reviews-filter";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = {
-  title: "Reviews | Andean Luxury Resort"
+  title: "Reseñas | Raíces Patrias Hostel"
 };
 
 export default function ReviewsPage() {
@@ -11,9 +11,9 @@ export default function ReviewsPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Reviews"
-          title="Animated social proof for couples, families, and business travelers."
-          copy="The review experience is designed to feel like a luxury editorial feature while still giving users fast filtering."
+          eyebrow="Reseñas"
+          title="Lo que dicen nuestros viajeros."
+          copy="Experiencias reales de mochileros, nómadas digitales y viajeros que encontraron su hogar lejos del hogar."
         />
       </AnimatedSection>
       <AnimatedSection className="mx-auto max-w-7xl py-14">

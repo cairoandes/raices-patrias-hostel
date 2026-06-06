@@ -3,7 +3,7 @@ import { GuestDashboard } from "@/components/guest-dashboard";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = {
-  title: "Guest Dashboard | Andean Luxury Resort"
+  title: "Dashboard | Raíces Patrias Hostel"
 };
 
 export default function GuestDashboardPage() {
@@ -11,8 +11,8 @@ export default function GuestDashboardPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Guest Dashboard"
-          title="A premium post-booking portal for reservation control, service requests, and concierge contact."
+          eyebrow="Dashboard"
+          title="Tu portal post-reserva para gestionar tu estadía."
         />
       </AnimatedSection>
       <AnimatedSection className="mx-auto max-w-7xl py-14">

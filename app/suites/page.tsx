@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { suites } from "@/lib/data";
 
 export const metadata = {
-  title: "Suites & Rooms | Andean Luxury Resort"
+  title: "Habitaciones | Raíces Patrias Hostel"
 };
 
 export default function SuitesPage() {
@@ -14,9 +14,9 @@ export default function SuitesPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Suites & Rooms"
-          title="Private sanctuaries for guests who expect space, silence, and impeccable detail."
-          copy="Each room layout is built as a premium sales component: gallery, amenities, capacity, pricing, floor plan, and direct reserve action."
+          eyebrow="Habitaciones"
+          title="Espacios con alma para viajeros que buscan conexión."
+          copy="Cada habitación tiene su propia historia: paredes con arte local, plantas colgantes y la calidez de un hogar lejos del hogar."
         />
       </AnimatedSection>
 
@@ -31,7 +31,7 @@ export default function SuitesPage() {
               <div className="grid gap-3">
                 {suite.gallery.slice(1).map((image) => (
                   <div key={image} className="relative min-h-48 overflow-hidden rounded-sm">
-                    <Image src={image} alt={`${suite.name} gallery`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 24vw" />
+                    <Image src={image} alt={`${suite.name} galería`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 24vw" />
                   </div>
                 ))}
               </div>
@@ -39,14 +39,14 @@ export default function SuitesPage() {
 
             <div className="glass flex flex-col justify-between p-6 md:p-8">
               <div>
-                <p className="text-xs uppercase tracking-[0.32em] text-[#d7b56d]">From ${suite.price} per night</p>
+                <p className="text-xs uppercase tracking-[0.32em] text-[#C1694F]">Desde ${suite.price} por noche</p>
                 <h2 className="mt-4 font-display text-5xl text-white">{suite.name}</h2>
                 <p className="mt-4 leading-8 text-white/65">{suite.view}</p>
                 <div className="mt-7 grid grid-cols-2 gap-3 text-sm text-white/72">
-                  <p className="flex items-center gap-2"><Users size={17} className="text-[#d7b56d]" /> {suite.capacity}</p>
-                  <p className="flex items-center gap-2"><Ruler size={17} className="text-[#d7b56d]" /> {suite.size}</p>
-                  <p className="flex items-center gap-2"><BedDouble size={17} className="text-[#d7b56d]" /> King bedding</p>
-                  <p className="flex items-center gap-2"><Bath size={17} className="text-[#d7b56d]" /> Marble bath</p>
+                  <p className="flex items-center gap-2"><Users size={17} className="text-[#C1694F]" /> {suite.capacity}</p>
+                  <p className="flex items-center gap-2"><Ruler size={17} className="text-[#C1694F]" /> {suite.size}</p>
+                  <p className="flex items-center gap-2"><BedDouble size={17} className="text-[#C1694F]" /> Camas individuales</p>
+                  <p className="flex items-center gap-2"><Bath size={17} className="text-[#C1694F]" /> Baño compartido</p>
                 </div>
                 <div className="mt-7">
                   <p className="text-xs uppercase tracking-[0.28em] text-white/48">Amenities</p>
@@ -58,12 +58,12 @@ export default function SuitesPage() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-7 border border-[#d7b56d]/20 bg-[#d7b56d]/8 p-5">
-                  <p className="text-xs uppercase tracking-[0.28em] text-[#d7b56d]">Floor Plan</p>
+                <div className="mt-7 border border-[#C1694F]/20 bg-[#C1694F]/8 p-5">
+                  <p className="text-xs uppercase tracking-[0.28em] text-[#C1694F]">Distribución</p>
                   <p className="mt-3 text-sm leading-7 text-white/68">{suite.floorPlan}</p>
                 </div>
               </div>
-              <Button href={`/reservation?room=${encodeURIComponent(suite.name)}`} className="mt-8 w-full">Reserve {suite.name}</Button>
+              <Button href={`/reservation?room=${encodeURIComponent(suite.name)}`} className="mt-8 w-full">Reservar {suite.name}</Button>
             </div>
           </AnimatedSection>
         ))}

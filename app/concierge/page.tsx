@@ -3,7 +3,7 @@ import { ConciergeChat } from "@/components/concierge-chat";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = {
-  title: "Digital Concierge | Andean Luxury Resort"
+  title: "Concierge Digital | Raíces Patrias Hostel"
 };
 
 export default function ConciergePage() {
@@ -11,9 +11,9 @@ export default function ConciergePage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Digital Concierge"
-          title="A luxury chat interface that makes the hotel feel attentive before the guest even arrives."
-          copy="Responses are mocked for instant demo reliability and can be replaced with a production AI service without redesigning the UI."
+          eyebrow="Concierge Digital"
+          title="Tu guía personal para disfrutar Carlos Paz como un local."
+          copy="Preguntá por bares, excursiones, actividades y todo lo que necesites. Tu aventura empieza acá."
         />
       </AnimatedSection>
       <AnimatedSection className="mx-auto max-w-7xl py-14">

@@ -12,33 +12,33 @@ export type Reservation = {
   status: "Confirmed" | "Pending" | "Modified";
 };
 
-const STORAGE_KEY = "andean-luxury-reservations";
+const STORAGE_KEY = "raices-patrias-reservations";
 
 export const mockReservations: Reservation[] = [
   {
-    reservationId: "ALR-10284",
-    date: "2026-05-29",
-    guestName: "Amelia Costa",
-    email: "amelia@example.com",
-    phone: "+54 387 555 0191",
-    room: "Andean Suite",
-    checkIn: "2026-06-12",
-    checkOut: "2026-06-16",
-    guests: 2,
-    extras: ["Airport Transfer", "Wine Tour"],
+    reservationId: "RPH-10284",
+    date: "2026-06-06",
+    guestName: "Lucía Rojas",
+    email: "lucia@example.com",
+    phone: "+54 3541 555 0191",
+    room: "Dormitorio 4 Camas",
+    checkIn: "2026-06-15",
+    checkOut: "2026-06-18",
+    guests: 1,
+    extras: ["Desayuno Criollo", "Alquiler Bicicleta"],
     status: "Confirmed"
   },
   {
-    reservationId: "ALR-10285",
-    date: "2026-05-29",
-    guestName: "Victor Laurent",
-    email: "victor@example.com",
-    phone: "+33 6 14 23 91 20",
-    room: "Presidential Suite",
-    checkIn: "2026-06-18",
-    checkOut: "2026-06-22",
-    guests: 4,
-    extras: ["Private Dinner", "Spa Package"],
+    reservationId: "RPH-10285",
+    date: "2026-06-06",
+    guestName: "Mateo Bianchi",
+    email: "mateo@example.com",
+    phone: "+54 11 6123 9120",
+    room: "Suite Bohemia con Balcón",
+    checkIn: "2026-06-20",
+    checkOut: "2026-06-24",
+    guests: 2,
+    extras: ["Tour Privado", "Late Checkout"],
     status: "Confirmed"
   }
 ];
@@ -74,7 +74,7 @@ class MockGoogleSheetReservationService implements ReservationSheetService {
     const reservations = readLocalReservations();
     const reservation: Reservation = {
       ...input,
-      reservationId: `ALR-${Math.floor(10000 + Math.random() * 89999)}`,
+      reservationId: `RPH-${Math.floor(10000 + Math.random() * 89999)}`,
       date: new Date().toISOString().slice(0, 10),
       status: "Confirmed"
     };

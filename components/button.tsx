@@ -4,19 +4,19 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 type Props = {
   href?: string;
   children: ReactNode;
-  variant?: "gold" | "ghost" | "dark";
+  variant?: "terracotta" | "ghost" | "dark";
   className?: string;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const styles = {
-  gold:
-    "bg-[#d7b56d] text-black hover:bg-white shadow-[0_18px_60px_rgba(215,181,109,0.24)]",
+  terracotta:
+    "bg-[#C1694F] text-black hover:bg-[#D4A574] shadow-[0_18px_60px_rgba(193,105,79,0.24)]",
   ghost:
-    "border border-white/20 text-white hover:border-[#d7b56d]/60 hover:bg-white/10",
+    "border border-white/20 text-white hover:border-[#C1694F]/60 hover:bg-white/10",
   dark: "bg-white/10 text-white border border-white/10 hover:bg-white/15"
 };
 
-export function Button({ href, children, variant = "gold", className = "", ...props }: Props) {
+export function Button({ href, children, variant = "terracotta", className = "", ...props }: Props) {
   const classes = `inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-6 py-3 text-sm font-semibold uppercase tracking-[0.22em] transition duration-300 ${styles[variant]} ${className}`;
 
   if (href) {

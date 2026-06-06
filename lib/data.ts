@@ -2,204 +2,204 @@ import { images } from "@/lib/assets";
 
 export const suites = [
   {
-    id: "presidential-suite",
-    name: "Presidential Suite",
-    price: 1280,
-    size: "215 sqm",
-    capacity: "4 guests",
-    view: "Private terrace, valley and Andes panorama",
+    id: "dorm-6",
+    name: "Dormitorio 6 Camas",
+    price: 25,
+    size: "28 sqm",
+    capacity: "6 viajeros",
+    view: "Vista al jardín interior",
     image: images.suite,
     gallery: [images.suite, images.pool, images.terrace],
-    amenities: ["Private butler", "Wine cellar", "Steam shower", "Outdoor soaking tub", "Dining salon"],
-    floorPlan: "Grand salon, primary suite, guest suite, terrace, spa bath"
+    amenities: ["Lockers individuales", "Luz de lectura", "Aire acondicionado", "Baño compartido"],
+    floorPlan: "6 camas individuales, lockers, escritorio compartido"
   },
   {
-    id: "andean-suite",
-    name: "Andean Suite",
-    price: 760,
-    size: "124 sqm",
-    capacity: "3 guests",
-    view: "Cerro San Bernardo and garden courtyards",
+    id: "dorm-4",
+    name: "Dormitorio 4 Camas",
+    price: 35,
+    size: "22 sqm",
+    capacity: "4 viajeros",
+    view: "Vista a la calle principal",
     image: images.terrace,
     gallery: [images.terrace, images.lobby, images.spa],
-    amenities: ["Fireplace", "Mountain balcony", "Aromatherapy bath", "Evening aperitif"],
-    floorPlan: "Bedroom, lounge, balcony, dressing room, marble bath"
+    amenities: ["Cortinas de privacidad", "Ensuite bathroom", "Escritorio", "Ventilador"],
+    floorPlan: "4 camas individuales, baño privado, ventana amplia"
   },
   {
-    id: "deluxe-mountain-view",
-    name: "Deluxe Mountain View",
-    price: 460,
-    size: "64 sqm",
-    capacity: "2 guests",
-    view: "Sunrise mountain aspect",
+    id: "privada-doble",
+    name: "Habitación Privada Doble",
+    price: 65,
+    size: "18 sqm",
+    capacity: "2 viajeros",
+    view: "Vista al patio con plantas",
     image: images.mountain,
     gallery: [images.mountain, images.lobby, images.gastronomy],
-    amenities: ["King bed", "Rain shower", "Curated minibar", "Work lounge"],
-    floorPlan: "Sleeping area, sitting bay, bath, view deck"
+    amenities: ["Cama doble", "Baño privado", "Escritorio", "Ventana con luz natural"],
+    floorPlan: "Cama doble, baño, escritorio, armario"
   },
   {
-    id: "executive-room",
-    name: "Executive Room",
-    price: 390,
-    size: "52 sqm",
-    capacity: "2 guests",
-    view: "Historic Salta skyline",
+    id: "suite-bohemia",
+    name: "Suite Bohemia con Balcón",
+    price: 85,
+    size: "32 sqm",
+    capacity: "2 viajeros",
+    view: "Balcón con vista a las sierras",
     image: images.lobby,
     gallery: [images.lobby, images.city, images.pool],
-    amenities: ["Quiet floor", "Executive desk", "Nespresso bar", "Priority concierge"],
-    floorPlan: "Bedroom, writing desk, bath, wardrobe"
+    amenities: ["Balcón privado", "Hamaca", "Baño privado", "Minibar", "Decoración artesanal"],
+    floorPlan: "Cama doble, living, balcón, baño, vestidor"
   }
 ];
 
 export const experiences = [
   {
-    title: "Wine Tours",
-    duration: "7 hours",
-    image: images.vineyard,
-    description: "Private tastings through Cafayate with a sommelier, vineyard lunch, and helicopter return option."
-  },
-  {
-    title: "High Mountain Adventures",
-    duration: "Full day",
-    image: images.mountain,
-    description: "Guided routes across red rock valleys, salt flats, and elevated viewpoints in a private expedition vehicle."
-  },
-  {
-    title: "Private Gastronomy",
-    duration: "3 hours",
-    image: images.gastronomy,
-    description: "A candlelit tasting menu from the chef's table with regional ingredients and rare Argentine pairings."
-  },
-  {
-    title: "Cultural Experiences",
-    duration: "4 hours",
+    title: "Tour Graffiti Urbano",
+    duration: "3 horas",
     image: images.city,
-    description: "After-hours museum access, artisan ateliers, and colonial architecture tours curated by local historians."
+    description: "Recorre los murales y graffiti de Carlos Paz con un artista local. Descubre las historias detrás de cada pared."
   },
   {
-    title: "Wellness Retreats",
-    duration: "Half or full day",
+    title: "Clase de Empanadas",
+    duration: "2 horas",
+    image: images.gastronomy,
+    description: "Aprende a hacer empanadas cordobesas de la mano de una chef local. Incluye degustación y receta."
+  },
+  {
+    title: "Noche de Fogata",
+    duration: "Toda la noche",
+    image: images.terrace,
+    description: "Guitarreada, mates, juegos de mesa y nuevas amistades bajo las estrellas de las sierras."
+  },
+  {
+    title: "Yoga al Amanecer",
+    duration: "1 hora",
     image: images.spa,
-    description: "Rituals inspired by Andean botanicals, thermal circuits, breathwork, and private recovery suites."
+    description: "Clase de yoga en la terraza con vista a las sierras. Ideal para conectar con vos mismo y con la naturaleza."
+  },
+  {
+    title: "Lago San Roque",
+    duration: "Medio día",
+    image: images.mountain,
+    description: "Excursión al lago con kayak, playa y picnic. El spot perfecto para desconectar y disfrutar de Córdoba."
   }
 ];
 
 export const destinationLocations = [
   {
-    name: "MAAM Museum",
-    type: "Museums",
-    position: [-24.7891, -65.4107] as [number, number],
-    distance: "12 min",
-    travel: "4.2 km by private car",
-    image: images.city,
-    description: "A refined cultural landmark with pre-Columbian collections and Salta's most important archaeological exhibits."
-  },
-  {
-    name: "Cafayate Vineyards",
-    type: "Vineyards",
-    position: [-26.0721, -65.9764] as [number, number],
-    distance: "2 hr 45 min",
-    travel: "188 km scenic route",
-    image: images.vineyard,
-    description: "High-altitude wineries known for Torrontes, private cellar tastings, and cinematic desert landscapes."
-  },
-  {
-    name: "Martin Miguel de Guemes Airport",
-    type: "Airport",
-    position: [-24.856, -65.4862] as [number, number],
-    distance: "24 min",
-    travel: "13.5 km by transfer",
-    image: images.lobby,
-    description: "The resort concierge arranges seamless airport transfers with arrival refreshments and luggage handling."
-  },
-  {
-    name: "Cerro San Bernardo",
-    type: "Attractions",
-    position: [-24.779, -65.3907] as [number, number],
-    distance: "18 min",
-    travel: "6.1 km by car",
+    name: "Lago San Roque",
+    type: "Naturaleza",
+    position: [-31.375, -64.475] as [number, number],
+    distance: "5 min",
+    travel: "1.5 km en bicicleta",
     image: images.mountain,
-    description: "Panoramic overlook above Salta with sunrise hikes, private picnics, and photographer-led excursions."
+    description: "El icónico lago de Carlos Paz. Playas, kayak, paseos en barco y atardeceres imperdibles."
   },
   {
-    name: "El Baqueano",
-    type: "Restaurants",
-    position: [-24.7867, -65.4123] as [number, number],
-    distance: "13 min",
-    travel: "4.6 km by car",
-    image: images.gastronomy,
-    description: "An elegant tasting-menu restaurant celebrating native Argentine ingredients and modern technique."
-  },
-  {
-    name: "Balcarce Cafe District",
-    type: "Cafes",
-    position: [-24.7813, -65.4132] as [number, number],
-    distance: "11 min",
-    travel: "3.9 km by car",
+    name: "Calle Balcarce",
+    type: "Vida Nocturna",
+    position: [-31.424, -64.498] as [number, number],
+    distance: "8 min",
+    travel: "2.3 km a pie",
     image: images.city,
-    description: "Boutique cafes, music rooms, and relaxed terraces for late afternoon coffee or evening aperitifs."
+    description: "El corazón de la vida nocturna: bares, restaurantes, música en vivo y la mejor movida de Carlos Paz."
   },
   {
-    name: "Hospital Privado Santa Clara",
-    type: "Hospitals",
-    position: [-24.7945, -65.4214] as [number, number],
-    distance: "16 min",
-    travel: "5.4 km by car",
+    name: "Cumbrecita",
+    type: "Excursión",
+    position: [-31.95, -64.85] as [number, number],
+    distance: "1 hr 30 min",
+    travel: "78 km por sierras",
+    image: images.vineyard,
+    description: "Pueblo de montaña alemán con cascadas, senderos y la mejor vista de las sierras de Córdoba."
+  },
+  {
+    name: "Cerro de la Cruz",
+    type: "Mirador",
+    position: [-31.42, -64.5] as [number, number],
+    distance: "15 min",
+    travel: "3.2 km en auto",
+    image: images.mountain,
+    description: "Mirador panorámico con vista 360° de Carlos Paz, el lago y las sierras. Ideal para fotos."
+  },
+  {
+    name: "Mercado Artesanal",
+    type: "Compras",
+    position: [-31.423, -64.497] as [number, number],
+    distance: "10 min",
+    travel: "2.1 km a pie",
+    image: images.gastronomy,
+    description: "Artesanías locales, cuero, mates, dulces regionales y souvenirs con alma cordobesa."
+  },
+  {
+    name: "Paseo de los Arroyos",
+    type: "Shopping",
+    position: [-31.426, -64.496] as [number, number],
+    distance: "12 min",
+    travel: "2.5 km en auto",
     image: images.lobby,
-    description: "Private medical support listed for guest assurance, coordinated discreetly by the resort team."
+    description: "Centro comercial a cielo abierto con tiendas, cafés y espacios verdes para relajarse."
+  },
+  {
+    name: "Hospital Privado Carlos Paz",
+    type: "Salud",
+    position: [-31.43, -64.5] as [number, number],
+    distance: "10 min",
+    travel: "2.8 km en auto",
+    image: images.lobby,
+    description: "Centro médico de referencia para emergencias y consultas, a minutos del hostel."
   }
 ];
 
 export const testimonials = [
   {
-    name: "Isabella & Mateo",
-    type: "Couples",
-    text: "Every moment felt choreographed but never forced. The mountain dinner was the most beautiful evening of our honeymoon.",
+    name: "Lucía y Franco",
+    type: "Parejas",
+    text: "La noche de fogata fue mágica. Conocimos gente increíble y las empanadas de la clase eran las mejores que probamos en Córdoba.",
     rating: 5
   },
   {
-    name: "The Nakamura Family",
-    type: "Families",
-    text: "The team understood luxury and warmth in equal measure. Our children still talk about the private astronomy experience.",
+    name: "Backpackers de Brasil",
+    type: "Mochileros",
+    text: "El hostel tiene onda propia. Las habitaciones son cómodas, el personal es genial y la ubicación es perfecta para explorar Carlos Paz.",
     rating: 5
   },
   {
-    name: "Charlotte Reeves",
-    type: "Business Travelers",
-    text: "Flawless corporate hospitality. Board meetings, transfers, dining, and wellness recovery all happened with quiet precision.",
+    name: "Sofi y Marti",
+    type: "Amigas",
+    text: "Nos quedamos una semana y no queríamos irnos. El yoga al amanecer en la terraza es una experiencia que todos deberían vivir.",
     rating: 5
   },
   {
-    name: "Rafael M.",
-    type: "Couples",
-    text: "It has the stillness of Aman and the service confidence of the great city hotels. Salta has never felt this elevated.",
+    name: "Nico M.",
+    type: "Nómada Digital",
+    text: "Wifi rápido, espacios de trabajo cómodos y la mejor comunidad viajera. Raíces Patrias es mi hogar lejos de casa en Córdoba.",
     rating: 5
   }
 ];
 
-export const extras = ["Airport Transfer", "Spa Package", "Wine Tour", "Private Dinner", "Late Checkout"];
+export const extras = ["Desayuno Criollo", "Alquiler Bicicleta", "Tour Privado", "Lavandería", "Late Checkout"];
 
 export const analytics = {
-  totalReservations: 384,
-  revenue: 842600,
-  occupancy: 87,
+  totalReservations: 1247,
+  revenue: 89650,
+  occupancy: 78,
   popularRooms: [
-    { name: "Presidential", reservations: 74 },
-    { name: "Andean", reservations: 132 },
-    { name: "Deluxe", reservations: 108 },
-    { name: "Executive", reservations: 70 }
+    { name: "Dorm 6 Camas", reservations: 412 },
+    { name: "Dorm 4 Camas", reservations: 356 },
+    { name: "Privada Doble", reservations: 298 },
+    { name: "Suite Bohemia", reservations: 181 }
   ],
   arrivals: [
-    { guest: "Amelia Costa", room: "Andean Suite", date: "May 30" },
-    { guest: "Victor Laurent", room: "Presidential Suite", date: "May 31" },
-    { guest: "Sofia Garcia", room: "Deluxe Mountain View", date: "June 1" }
+    { guest: "Camila Rojas", room: "Dorm 4 Camas", date: "Jun 12" },
+    { guest: "Luca Bianchi", room: "Suite Bohemia", date: "Jun 13" },
+    { guest: "Ana Torres", room: "Privada Doble", date: "Jun 14" }
   ],
   revenueTrend: [
-    { month: "Jan", revenue: 92000 },
-    { month: "Feb", revenue: 111000 },
-    { month: "Mar", revenue: 138000 },
-    { month: "Apr", revenue: 156000 },
-    { month: "May", revenue: 182000 },
-    { month: "Jun", revenue: 205000 }
+    { month: "Ene", revenue: 12400 },
+    { month: "Feb", revenue: 15800 },
+    { month: "Mar", revenue: 18200 },
+    { month: "Abr", revenue: 16500 },
+    { month: "May", revenue: 14300 },
+    { month: "Jun", revenue: 12450 }
   ]
 };

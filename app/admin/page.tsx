@@ -3,7 +3,7 @@ import { AdminAnalytics } from "@/components/admin-analytics";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata = {
-  title: "Admin Analytics Demo | Andean Luxury Resort"
+  title: "Admin | Raíces Patrias Hostel"
 };
 
 export default function AdminPage() {
@@ -11,9 +11,9 @@ export default function AdminPage() {
     <main className="px-5 pt-32 md:px-8">
       <AnimatedSection className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Admin Analytics Demo"
-          title="A beautiful operating dashboard for hotel owners."
-          copy="Reservations, revenue, occupancy, room demand, and upcoming arrivals are presented in a polished owner-facing interface."
+          eyebrow="Panel de Administración"
+          title="Dashboard para gestionar el hostel."
+          copy="Reservas, ingresos, ocupación, demanda de habitaciones y próximas llegadas en una interfaz simple y funcional."
         />
       </AnimatedSection>
       <AnimatedSection className="mx-auto max-w-7xl py-14">
